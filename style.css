@@ -4,7 +4,6 @@
   border: 1px solid #dfe0e7;
   border-radius: 10px;
   padding: 20px;
-  font-family: "Poppins", sans-serif;
 }
 
 .input-box {
@@ -16,4 +15,23 @@
   margin: 40px auto;
   text-align: center;
   font-family: monospace;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: #ffcc29;
+}
+
+li {
+  list-style: none;
+  font-size: 16px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+#date {
+  color: #ff005c;
 }
