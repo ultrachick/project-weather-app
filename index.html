@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/7cd60a2fa4.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
 </head>
 <style>
@@ -20,120 +20,37 @@
 
 <body>
 
+<div class="weather-app">
     <form id="search-city">
-        <input type="text" placeholder="type a city" autocomplete="off" id="city-input">
+        <input type="text" placeholder="type a city" autocomplete="off" id="city-input" autofocus="on">
         <input type="submit" value="search">
         <input type="submit" value="current weather" id="current-city-button">
     </form>
 
 
-    <p>
-       <a id="temp">0</a> ºC
-    </p>
-
-    <p>
-        
-
-    <p id="city">
-        Type a city
-    </p>
-
-    <p id="date">
-
-    </p>
-
-    <ul>
-        <li>Humidity: <span id="humidity"></span>%</li>
-        <li>Wind: <span id="wind"></span> km/h</li>
-    </ul>
-
-<div class="container">
-    <form>
-        <input type="text" placeholder="enter a city" autofocus="on">
-        <input type="submit" value="search">
-    </form>
-</div>
-
-<div class="row">
-    <div class="col-6"></div>
-    <p class="temp"> 23 ºC</p>
-</div>
-</div>
-<div class="col-6"></div>
-<p class="city">
+<h1 id=city>
     Guadalajara
-</p>
-<p id="date">
+</h1>    
 
-</p>
+<div class="col-6">
+    <ul id="description-day">
+        <li id="date">
+        </li>
+        <li><a id="temp">0</a> ºC  | ºF</li>
+    </ul>
 </div>
+    
+<div class="col-6">
+    <ul id="caracteristicas">
+        <li>humidity: <span id="humidity"></span>%</li>
+        <li>wind: <span id="wind"></span> km/h</li>
+    </ul>
 </div>
-<div class="resum">
-    <div class="sol1">
-        <i class="fas fa-sun"></i>
-    </div>
-    <p class="tempo">
-        <strong>sunny</strong>
-    </p>
-    <p class="desc">
-        precipitation: 4% <br />
-        wind: 8km/h
-    </p>
-</div>
-</p>
-<hr>
-<div class="week">
-    <div class="row">
-        <div class="col-2 dia">
-            lunes
-            <div class="tempo">
-                sunny
-            </div>
-            <div class="sol">
-                <i class="fas fa-sun"></i>
-            </div>
-        </div>
-        <div class="col-2 dia">
-            martes
-            <div class="tempo">
-                rain
-            </div>
-            <div class="lluvia">
-                <i class="fas fa-cloud-showers-heavy"></i>
-            </div>
-        </div>
-        <div class="col-2 dia">
-            miercoles
-            <div class="tempo">
-                clouds
-            </div>
-            <div class="nube">
-                <i class="fas fa-cloud"></i>
-            </div>
-        </div>
-        <div class="col-2 dia">
-            jueves
-            <div class="tempo">
-                storm
-            </div>
-            <div class="rayo">
-                <i class="fas fa-poo-storm"></i>
-            </div>
-        </div>
-        <div class="col-2 dia">
-            viernes
-            <div class="tempo">
-                cloudy
-            </div>
-            <div class="solNube">
-                <i class="fas fa-cloud-sun"></i>
-            </div>
-        </div>
-    </div>
-</div>
+
+
 
 <p><a href="https://github.com/ultrachick/project-weather-app">Open coded</a> by Montse Salazar 😎</p>
-
+</div>
     <script src="script.js"></script>
 
 </body>
