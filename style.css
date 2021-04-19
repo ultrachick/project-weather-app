@@ -1,4 +1,17 @@
 .weather-app {
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 300px;
+  margin: 40px auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.input-box {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.mon-description {
+  margin: 40px auto;
+  text-align: center;
 }
