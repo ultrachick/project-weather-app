@@ -76,3 +76,18 @@ a:hover {
   color: white;
   transition: all 200ms ease-in-out;
 }
+
+a .active {
+  color: #ffcc29;
+}
+
+.unidades {
+  position: relative;
+  font-size: 16px;
+  top: -30px;
+}
+
+#sun {
+  font-size: 80px;
+  color: #ffcc29;
+}

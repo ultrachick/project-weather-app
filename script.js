@@ -20,6 +20,8 @@
             document.querySelector("#temp").innerHTML = Math.round(response.data.main.temp);
             document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
             document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+        
+            celsiusTemperature = response.data.main.temp ;
         }
 
 function searchCity(city) {
@@ -37,16 +39,19 @@ function searchCity(city) {
         function convertToFarenheith (event){
             event.preventDefault();
             let tempElement = document.querySelector("#temp");
-            let temp = tempElement.innerHTML;
-            temp = Number(temp);
-            tempElement.innerHTML = Math.round(`${temp}`* 9 / 5 + 32);
+            let farenheithTemp = tempElement.innerHTML;
+            farenheithTemp = Number(temp);
+            tempElement.innerHTML = Math.round(celsiusTemperature * 9 / 5 + 32);
         }
 
-        function convertToCelsius(event) {
-                event.preventDefault();
-                let tempElement = document.querySelector("#temp");
-                tempElement.innerHTML = Math.round(`${temp}`- 32 * 5 / 9);
-            }
+        function convertToCentigrados (event){
+            event.preventDefault();
+            let tempElement = document.querySelector("#temp");
+            tempElement.innerHTML = Math.round(celsiusTemperature);
+        }
+
+    
+    let celsiusTemperature = null;
 
     let dateElement = document.querySelector("#date");
     let time = new Date();  
@@ -59,8 +64,9 @@ function searchCity(city) {
     let farenheith = document.querySelector ("#farenheith");
     farenheith.addEventListener ("click",convertToFarenheith);
 
-    let celsius = document.querySelector("#centigrados");
-    celsius.addEventListener("click", convertToCelsius);
+    let centigrados = document.querySelector ("#centigrados");
+    centigrados.addEventListener ("click",convertToCentigrados);
+
 
     function searchLocation(position){
 
@@ -72,13 +78,5 @@ function searchCity(city) {
   axios.get(apiUrl).then(displayWeather);
     }
 
-
-function getCurrentCity(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentCity(searchLocation);
-}
-    
-
-    
-    
+ 
 searchCity("Guadalajara");
