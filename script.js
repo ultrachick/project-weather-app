@@ -39,13 +39,13 @@ function searchCity(city) {
             let tempElement = document.querySelector("#temp");
             let temp = tempElement.innerHTML;
             temp = Number(temp);
-            tempElement.innerHTML = 66;
+            tempElement.innerHTML = Math.round(`${temp}`* 9 / 5 + 32);
         }
 
         function convertToCelsius(event) {
                 event.preventDefault();
                 let tempElement = document.querySelector("#temp");
-                tempElement.innerHTML = 19;
+                tempElement.innerHTML = Math.round(`${temp}`- 32 * 5 / 9);
             }
 
     let dateElement = document.querySelector("#date");
