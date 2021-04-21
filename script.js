@@ -78,8 +78,6 @@ function getCurrentCity(event) {
   navigator.geolocation.getCurrentCity(searchLocation);
 }
     
-    let currentWeather = document.querySelector ("#current-city-button")
-    currentWeather.addEventListener ("click", getCurrentCity)
 
     
     
