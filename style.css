@@ -14,6 +14,7 @@ body {
   border-radius: 10px;
   padding: 20px;
   background-color: white;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
 }
 
 .input-box {
@@ -65,4 +66,13 @@ ul {
 
 #temp {
   font-size: 60px;
+}
+
+a {
+  color: #ffcc29;
+}
+
+a:hover {
+  color: white;
+  transition: all 200ms ease-in-out;
 }
