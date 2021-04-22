@@ -22,6 +22,15 @@
             document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
         
             celsiusTemperature = response.data.main.temp ;
+
+            let iconElement = document.querySelector("#sun");
+
+            iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  
+
         }
 
 function searchCity(city) {
