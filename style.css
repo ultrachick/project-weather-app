@@ -48,10 +48,13 @@ ul {
 
 #date {
   color: #acb2b8;
+  padding: 0 35px 0 35px;
 }
 
-#caracteristicas {
+.caracteristicas {
   color: #acb2b8;
+  text-align: center;
+  font-size: 16px;
 }
 
 #humidity {
@@ -90,4 +93,10 @@ a .active {
 #sun {
   font-size: 80px;
   color: #ffcc29;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
 }
