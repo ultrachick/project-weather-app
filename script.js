@@ -99,22 +99,6 @@ function searchCity(city) {
             searchCity(city);
         }
 
-        function convertToFarenheith (event){
-            event.preventDefault();
-            let tempElement = document.querySelector("#temp");
-            let farenheithTemp = tempElement.innerHTML;
-            farenheithTemp = Number(temp);
-            tempElement.innerHTML = Math.round(celsiusTemperature * 9 / 5 + 32);
-        }
-
-        function convertToCentigrados (event){
-            event.preventDefault();
-            let tempElement = document.querySelector("#temp");
-            tempElement.innerHTML = Math.round(celsiusTemperature);
-        }
-
-    
-    let celsiusTemperature = null;
 
     let dateElement = document.querySelector("#date");
     let time = new Date();  
@@ -122,14 +106,6 @@ function searchCity(city) {
 
     let searchForm = document.querySelector("#search-city");
     searchForm.addEventListener("submit", searchSubmit);
-
-    
-    let farenheith = document.querySelector ("#farenheith");
-    farenheith.addEventListener ("click",convertToFarenheith);
-
-    let centigrados = document.querySelector ("#centigrados");
-    centigrados.addEventListener ("click",convertToCentigrados);
-
 
     function searchLocation(position){
 
