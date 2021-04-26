@@ -1,10 +1,16 @@
 body {
-  background-image: linear-gradient(
-    to top,
-    #1e3c72 0%,
-    #1e3c72 1%,
-    #2a5298 100%
-  );
+  background-color: #e4e4e1;
+  background-image: radial-gradient(
+      at top center,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(0, 0, 0, 0.03) 100%
+    ),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(133, 141, 146, 0.6) 100%
+    );
+  background-blend-mode: normal, multiply;
 }
 .weather-app {
   max-width: 300px;
@@ -26,7 +32,8 @@ body {
   text-align: center;
   font-family: monospace;
   font-size: 14px;
-  color: white;
+  color: #787d83;
+  padding: 0 0 50px 0;
 }
 
 h1 {
@@ -53,7 +60,8 @@ ul {
 
 #date {
   color: #acb2b8;
-  padding: 0 35px 0 35px;
+  padding: 15px 25px 0 28px;
+  font-size: 20px;
 }
 
 .caracteristicas {
@@ -79,11 +87,11 @@ ul {
 #coded {
   text-decoration: none;
 
-  color: white;
+  color: #787d83;
 }
 
 #coded:hover {
-  color: #f9fd04;
+  color: #b48400;
   transition: all 200ms ease-in-out;
   text-shadow: #93a5cf;
 }
@@ -100,7 +108,8 @@ ul {
 }
 
 .weather-forecast {
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: ;
   text-align: center;
   font-size: 12px;
 }
