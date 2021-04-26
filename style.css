@@ -109,3 +109,18 @@ ul {
 #city-input {
   box-shadow: 10px 10px 10px rgba(1, 10, 32, 0.2);
 }
+
+.weather-forecast-temperature-max {
+  color: #fcc100;
+}
+
+.weather-forecast-date {
+  font-weight: bold;
+  font-family: "Hammersmith One", sans-serif;
+  text-align: center;
+  color: #acb2b8;
+}
+
+.weather-forecast-temperature-min {
+  color: #acb2b8;
+}
