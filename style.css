@@ -1,11 +1,5 @@
 body {
-  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
-    linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.4) 0%,
-      rgba(0, 0, 0, 0.25) 200%
-    );
-  background-blend-mode: multiply;
+  background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
 }
 .weather-app {
   max-width: 300px;
@@ -26,7 +20,7 @@ body {
   margin: 40px auto;
   text-align: center;
   font-family: monospace;
-  font-size: 12px;
+  font-size: 14px;
   color: white;
 }
 
@@ -71,17 +65,16 @@ ul {
   font-size: 60px;
 }
 
-a {
-  color: #ffcc29;
-}
+#coded {
+  text-decoration: none;
 
-a:hover {
   color: white;
-  transition: all 200ms ease-in-out;
 }
 
-a .active {
+#coded:hover {
   color: #ffcc29;
+  transition: all 200ms ease-in-out;
+  text-shadow: #93a5cf;
 }
 
 .unidades {

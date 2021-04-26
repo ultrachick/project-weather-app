@@ -15,6 +15,43 @@
             return `${day}, at ${hours}:${minutes}`;
         }
 
+        function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <img
+          src="http://openweathermap.org/img/wn/03n@2x.png"
+          alt=""
+          width="42"
+        />
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 18° </span>
+          <span class="weather-forecast-temperature-min"> 12° </span>
+        </div>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+        
+        }
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "c113b6dd33e31601e32997fb0eb67bad";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
         function displayWeather (response){
             document.querySelector("#city").innerHTML = response.data.name;
             document.querySelector("#temp").innerHTML = Math.round(response.data.main.temp);
@@ -31,7 +68,9 @@
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-        }
+        getForecast(response.data.coord);
+
+}
 
 function searchCity(city) {
   let apiKey = "c113b6dd33e31601e32997fb0eb67bad";
@@ -89,3 +128,4 @@ function searchCity(city) {
 
  
 searchCity("Guadalajara");
+displayForecast();
