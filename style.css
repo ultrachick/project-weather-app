@@ -1,14 +1,19 @@
 body {
-  background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+  background-image: linear-gradient(
+    to top,
+    #1e3c72 0%,
+    #1e3c72 1%,
+    #2a5298 100%
+  );
 }
 .weather-app {
   max-width: 300px;
   margin: 40px auto;
   border: 1px solid #dfe0e7;
-  border-radius: 10px;
+  border-radius: 17px;
   padding: 20px;
   background-color: white;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 10px 10px 10px rgba(1, 10, 32, 0.25);
 }
 
 .input-box {
@@ -26,8 +31,14 @@ body {
 
 h1 {
   font-family: "Poppins", sans-serif;
-  color: #ffcc29;
+  color: white;
   text-align: center;
+
+  border: 1px solid #fcc100;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fcc100;
+  box-shadow: 5px 5px 5px rgba(114, 103, 6, 0.1);
 }
 
 li {
@@ -72,7 +83,7 @@ ul {
 }
 
 #coded:hover {
-  color: #ffcc29;
+  color: #f9fd04;
   transition: all 200ms ease-in-out;
   text-shadow: #93a5cf;
 }
@@ -92,4 +103,9 @@ ul {
   margin-top: 20px;
   text-align: center;
   font-size: 12px;
+}
+
+#search-button,
+#city-input {
+  box-shadow: 10px 10px 10px rgba(1, 10, 32, 0.2);
 }
